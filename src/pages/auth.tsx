@@ -138,7 +138,7 @@ const Auth = () => {
           className="w-auto mt-4 mx-2 py-4 uppercase bg-red-900 text-gray-300 rounded-xl hover:bg-red-800/70 hover:text-gray-200 font-bold"
           onClick={formMode === 'login' ? login : register}
         >
-          {formMode === 'login' ? 'CREATE ACCOUNT' : 'SIGN IN'}
+          {formMode === 'login' ? 'SIGN IN' : 'CREATE ACCOUNT'}
         </button>
         <p
           className="flex w-full h-full mt-4 text-gray-100 p-3 font-semibold text-md"
