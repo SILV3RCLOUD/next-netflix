@@ -39,7 +39,7 @@ const Home = () => {
       <Billboard />
       <div className="pb-40">
         <MovieList title="Trending Now" data={movies} />
-        <MovieList title="Your" data={favorites} />
+        {/* <MovieList title="Your" data={favorites} /> */}
       </div>
     </>
   );
