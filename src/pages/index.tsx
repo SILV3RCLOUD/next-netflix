@@ -1,9 +1,12 @@
+import React from 'react';
 import { NextPageContext } from 'next';
-import { getSession, signOut } from 'next-auth/react';
-import Link from 'next/link';
+import { getSession } from 'next-auth/react';
+
+import Navbar from '@/components/Navbar';
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
+
   if (!session) {
     return {
       redirect: {
@@ -20,18 +23,9 @@ export async function getServerSideProps(context: NextPageContext) {
 
 const Home = () => {
   return (
-    <main className="flex h-full w-full">
-      <div className="flex flex-col h-full w-full items-center justify-center">
-        <h1 className="text-md text-gray-100 font-bold uppercase">WELCOME</h1>
-        <Link
-          onClick={() => signOut()}
-          className="text-sm text-gray-300 underline cursor-pointer uppercase"
-          href="/auth"
-        >
-          LOGOUT
-        </Link>
-      </div>
-    </main>
+    <>
+      <Navbar />
+    </>
   );
 };
 
