@@ -101,7 +101,7 @@ const Auth = () => {
   }, [email, password]);
 
   return (
-    <main className="flex h-full w-full items-center justify-center">
+    <main className="flex h-full w-full items-center justify-center bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="flex flex-col w-[400px] min-h-[200px] bg-black/70 p-5">
         <h1 className="text-3xl text-gray-100 font-bold uppercase text-center">
           {formMode === 'login' ? 'SIGN IN' : 'REGISTER'}
